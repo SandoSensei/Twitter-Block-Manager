@@ -1,0 +1,111 @@
+<!--
+  Copyright 2026 Sando
+  Licensed under the Apache License, Version 2.0
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root {
+      --bg-color: #000000; /* Match Lights Out Theme */
+      --card-bg: #15181c;
+      --text-color: #e7e9ea;
+      --text-muted: #71767b;
+      --primary-color: #1d9bf0;
+      --primary-hover: #1a8cd8;
+      --border-color: #2f3336;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      width: 320px;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    h2 {
+      margin: 0 0 4px 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      color: var(--text-color);
+    }
+    p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0 0 16px 0;
+      line-height: 1.4;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.02);
+      margin-bottom: 16px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--text-muted);
+      transition: background-color 0.3s;
+    }
+    .status-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 11px 20px;
+      font-size: 13.5px;
+      font-weight: 800;
+      border-radius: 9999px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      outline: none;
+    }
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .footer {
+      margin-top: 16px;
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Twitter/X Block Manager</h2>
+    <p>Bulk block, follow, or mute lists using your active session.</p>
+
+    <!-- Status Badge -->
+    <div class="status-badge">
+      <span id="popup-status-dot" class="status-dot"></span>
+      <span id="popup-status-text" class="status-text">Checking Session...</span>
+    </div>
+
+    <button id="open-btn" class="btn">Open Dashboard</button>
+    <div class="footer">Apache License 2.0</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
