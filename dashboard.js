@@ -460,7 +460,7 @@ btnDownloadTxt.addEventListener('click', () => {
   a.href = url;
   a.download = `twitter_blocks_${new Date().toISOString().split('T')[0]}.txt`;
   a.click();
-  log('[Export] Downloaded TXT file (Usernames Only).', 'success');
+  log('[Export] Downloaded TXT file (Username Only).', 'success');
 });
 
 btnDownloadCsv.addEventListener('click', () => {
@@ -481,7 +481,7 @@ btnDownloadCsv.addEventListener('click', () => {
   a.href = url;
   a.download = `twitter_blocks_${new Date().toISOString().split('T')[0]}.csv`;
   a.click();
-  log('[Export] Downloaded CSV file (Full Profiles).', 'success');
+  log('[Export] Downloaded CSV file (Full Profile).', 'success');
 });
 
 // --- Import & Parse Logic ---
